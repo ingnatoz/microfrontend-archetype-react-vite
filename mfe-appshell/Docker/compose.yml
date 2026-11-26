@@ -1,0 +1,28 @@
+# App Shell container: make docker-up -> http://localhost:8080
+
+name: mfe-appshell
+
+services:
+  mfe-appshell:
+    build:
+      context: ..
+      dockerfile: Docker/Dockerfile
+      args:
+        # Public URL of mfe-remote (the one the browser uses).
+        MFE_REMOTE_URL: ${MFE_REMOTE_URL:-http://localhost:8081}
+    image: mfe-appshell:local
+    container_name: mfe-appshell
+    ports:
+      - "8080:8080" # host : container
+    read_only: true
+    tmpfs:
+      - /tmp
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    deploy:
+      resources:
+        limits:
+          cpus: "0.5"
+          memory: 128M

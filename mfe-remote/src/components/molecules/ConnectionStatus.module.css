@@ -1,0 +1,6 @@
+.status {
+  display: block;
+  margin: 16px 0 0;
+  font-size: 14px;
+  color: var(--mfe-muted);
+}

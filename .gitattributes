@@ -1,0 +1,2 @@
+# LF line endings on every system (Docker and nginx run on Linux).
+* text=auto eol=lf

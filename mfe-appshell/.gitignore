@@ -1,0 +1,12 @@
+# Dependencies
+node_modules/
+
+# Builds and reports
+dist/
+coverage/
+
+# Environment variables: never committed
+.env*
+
+# Logs
+*.log

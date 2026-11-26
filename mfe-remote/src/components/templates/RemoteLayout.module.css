@@ -1,0 +1,13 @@
+/*
+ * Inside the App Shell, the remote inherits its tokens (var(--accent), ...).
+ * The second value is the fallback for when it runs alone (standalone mode).
+ */
+.layout {
+  --mfe-surface: var(--surface, #ffffff);
+  --mfe-text: var(--text, #1c1f24);
+  --mfe-muted: var(--muted, #5b6270);
+  --mfe-accent: var(--accent, #4f46e5);
+  --mfe-accent-contrast: var(--accent-contrast, #ffffff);
+
+  color: var(--mfe-text);
+}

@@ -1,0 +1,16 @@
+.card {
+  padding: 28px;
+  border: 2px dashed var(--mfe-accent);
+  border-radius: 16px;
+  background: var(--mfe-surface);
+}
+
+.title {
+  margin: 12px 0 8px;
+  font-size: 22px;
+}
+
+.text {
+  margin: 0 0 20px;
+  color: var(--mfe-muted);
+}

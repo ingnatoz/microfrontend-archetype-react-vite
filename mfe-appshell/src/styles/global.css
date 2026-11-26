@@ -1,0 +1,43 @@
+/*
+ * App Shell design tokens. Microfrontends inherit them (var(--accent), ...)
+ * and define their own fallback value for when they run alone.
+ */
+:root {
+  color-scheme: light dark;
+  --bg: #f5f6f8;
+  --surface: #ffffff;
+  --text: #1c1f24;
+  --muted: #5b6270;
+  --border: #e2e5ea;
+  --accent: #4f46e5;
+  --accent-contrast: #ffffff;
+  --danger: #d93036;
+
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  line-height: 1.5;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #111318;
+    --surface: #1a1d24;
+    --text: #e8eaee;
+    --muted: #9aa1ad;
+    --border: #2a2e37;
+    --accent: #818cf8;
+    --accent-contrast: #111318;
+    --danger: #ff6b6b;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+}

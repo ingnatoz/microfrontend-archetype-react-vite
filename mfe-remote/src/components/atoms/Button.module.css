@@ -1,0 +1,19 @@
+.button {
+  padding: 10px 18px;
+  border: 0;
+  border-radius: 10px;
+  background: var(--mfe-accent);
+  color: var(--mfe-accent-contrast);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.button:hover {
+  filter: brightness(1.1);
+}
+
+.button:focus-visible {
+  outline: 3px solid var(--mfe-accent);
+  outline-offset: 3px;
+}

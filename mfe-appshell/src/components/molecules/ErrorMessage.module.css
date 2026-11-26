@@ -1,0 +1,11 @@
+.error {
+  padding: 20px;
+  border: 1px solid var(--danger);
+  border-radius: 12px;
+  background: var(--surface);
+}
+
+.detail {
+  margin: 8px 0 16px;
+  color: var(--muted);
+}

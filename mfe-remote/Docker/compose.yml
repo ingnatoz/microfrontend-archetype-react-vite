@@ -1,0 +1,28 @@
+# Remote microfrontend container: make docker-up -> http://localhost:8081
+
+name: mfe-remote
+
+services:
+  mfe-remote:
+    build:
+      context: ..
+      dockerfile: Docker/Dockerfile
+      args:
+        # Public URL of mfe-appshell (the one the browser uses).
+        HOST_URL: ${HOST_URL:-http://localhost:8080}
+    image: mfe-remote:local
+    container_name: mfe-remote
+    ports:
+      - "8081:8080" # host : container
+    read_only: true
+    tmpfs:
+      - /tmp
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    deploy:
+      resources:
+        limits:
+          cpus: "0.5"
+          memory: 128M

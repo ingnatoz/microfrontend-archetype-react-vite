@@ -1,0 +1,15 @@
+# OS and editors
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Each project has its own .gitignore; this is a safety net.
+node_modules/
+dist/
+coverage/
+.env*
+
+# Claude Code: personal settings
+CLAUDE.local.md
+.claude/settings.local.json
